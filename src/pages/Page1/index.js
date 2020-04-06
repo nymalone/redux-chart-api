@@ -11,6 +11,18 @@ const Main = styled.div`
   display: flex;
   justify-content: space-evenly;
   line-height: 25px;
+  padding-top: 167px;
+`;
+
+const Title = styled.p`
+  color: #001B36;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+  position: absolute;
+  margin-left: 178px;
+  margin-top: 50px;
 `;
 
 class Page1 extends Component {
@@ -19,6 +31,7 @@ class Page1 extends Component {
   render() {
     return (
       <div>
+       <Title>Page 1</Title>
        <Main> 
        <BarChart />
        <PieChart />

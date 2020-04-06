@@ -9,6 +9,7 @@ export const data = {
 export const options = {
   legend:              false,
   maintainAspectRatio: false,
+  responsive: true,
   layout:              {
     padding: {
       left:   10,

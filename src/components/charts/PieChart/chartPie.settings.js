@@ -8,6 +8,7 @@ export const data = {
 };
 
 export const options = {
+  responsive: true,
   legend: {
     textDirection: "ltr",
     display: true,

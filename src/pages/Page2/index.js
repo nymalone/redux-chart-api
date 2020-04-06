@@ -2,12 +2,17 @@ import React, { Component } from "react";
 
 import styled from "styled-components";
 
-const Title = styled.div`
-  font-size: 18px;
-  color: black;
-  margin-left: 300px;
-  line-height: 25px;
+const Title = styled.p`
+  color: #001B36;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+  position: absolute;
+  margin-left: 178px;
+  margin-top: 50px;
 `;
+
 
 class Page1 extends Component {
   state = {};
@@ -15,7 +20,7 @@ class Page1 extends Component {
   render() {
     return (
       <div>
-       <Title> PAGE 2  </Title>
+       <Title>Page 2</Title>
       </div>
     );
   }
