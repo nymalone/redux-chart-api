@@ -51,7 +51,7 @@ export default class BarChart extends Component {
   };
 
   componentDidMount() {
-    this.getResult().catch((err) => console.error(err));
+    this.getResult().catch((err) => console.error('Failed retrieving information', err));
   }
 
 
