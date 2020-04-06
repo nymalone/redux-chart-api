@@ -3,11 +3,13 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import BarChart from '../../components/charts/BarChart'
+import PieChart from '../../components/charts/PieChart'
 
-const Title = styled.div`
+const Main = styled.div`
   font-size: 18px;
   color: black;
-  margin-left: 300px;
+  display: flex;
+  justify-content: space-evenly;
   line-height: 25px;
 `;
 
@@ -17,9 +19,10 @@ class Page1 extends Component {
   render() {
     return (
       <div>
-       <Title> 
+       <Main> 
        <BarChart />
-       </Title>
+       <PieChart />
+       </Main>
       </div>
     );
   }

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { Bar } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
-import { anualResultChartBar } from "../../../services/api";
-import { data, options } from "./chartBar.settings";
+import { percentageResultChartPie } from "../../../services/api";
+import { data, options } from "./chartPie.settings";
 
 import styled from "styled-components";
+
 
 const Container = styled.div`
   position: relative;
@@ -36,7 +37,8 @@ const Title = styled.div`
   margin-bottom: 2rem;
 `;
 
-export default class BarChart extends Component {
+
+export default class PieChart extends Component {
   constructor(props) {
     super(props);
 
@@ -46,7 +48,7 @@ export default class BarChart extends Component {
   }
 
   getResult = async () => {
-    const response = await anualResultChartBar.get("/anual-result");
+    const response = await percentageResultChartPie.get("/anual-percentage");
     this.setState({ anualResult: response.data });
   };
 
@@ -61,15 +63,15 @@ export default class BarChart extends Component {
       .filter((item, idx) => idx < 6) 
       .map((item) => item);
 
-    let dataBars = data;
-    dataBars.labels = dataResult.map((res) => res.label);
-    dataBars.datasets[0].data = dataResult.map((res) => res.value);
+    let dataPie = data;
+    dataPie.labels = dataResult.map((res) => res.label);
+    dataPie.datasets[0].data = dataResult.map((res) => res.value);
 
     return (
       <Container>
-        <Title>BARS CHART</Title>
+        <Title> PIE CHART</Title>
         <Chart>
-          <Bar data={dataBars} options={options} />
+          <Pie data={dataPie} options={options} />
         </Chart>
       </Container>
     );
