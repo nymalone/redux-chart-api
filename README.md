@@ -1,68 +1,195 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<img src="https://semantix.com.br/wp-content/uploads/2019/12/Semantix-horizontal.png" alt="drawing" width="200"/>
 
-### `npm test`
+# Teste de Front-end Semantix
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este teste é apresentado aos candidatos as vagas de desenvolvimento Front-end para avaliar os quesitos técnicos.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Desafio
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+O objetivo é criar duas páginas com gráficos apresentando dados vindos de uma api rest.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Requisitos:
 
-### `npm run eject`
+- Implemente o HTML/CSS da tela com base no layout disponível;
+- Pode ser usado qualquer framework javascript, recomendado o uso do [React](https://reactjs.org/);
+- Recomendamos o usos das seguintes libs para construir os graficos:
+  - [Chart js](https://www.chartjs.org/samples/latest/)
+  - [Echarts](https://echarts.apache.org/examples/en/index.html)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Ganhe pontos extras por:
+- A página ser responsiva;
+- Testes unitários e funcionais;
+- Uso do React;
+- Organização de código, componentes reutilizáveis.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Layout: [Figma file](https://www.figma.com/file/YCCwmJvJDqO5dq4nMkoxQI/front-end-teste?node-id=0%3A1)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## API
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Gráfico de barra:
 
-## Learn More
+> GET https://private-afe609-testefront.apiary-mock.com/anual-result
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Response:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+[
+  {
+    "label": "january",
+    "value": 3000
+  },
+  {
+    "label": "february",
+    "value": 2000
+  },
+  {
+    "label": "march",
+    "value": 2600
+  },
+  {
+    "label": "april",
+    "value": 2000
+  },
+  {
+    "label": "may",
+    "value": 3000
+  },
+  {
+    "label": "june",
+    "value": 4000
+  },
+  {
+    "label": "july",
+    "value": 3500
+  },
+  {
+    "label": "august",
+    "value": 1000
+  },
+  {
+    "label": "september",
+    "value": 1200
+  },
+  {
+    "label": "october",
+    "value": 2000
+  },
+  {
+    "label": "november",
+    "value": 5000
+  },
+  {
+    "label": "december",
+    "value": 3000
+  }
+]
+```
 
-### Code Splitting
+Gráfico pie:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+> GET https://private-afe609-testefront.apiary-mock.com/anual-percentage
 
-### Analyzing the Bundle Size
+Response:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```json
+[
+  {
+    "label": "legend 1",
+    "value": 30
+  },
+  {
+    "label": "legend 2",
+    "value": 30
+  },
+  {
+    "label": "legend 3",
+    "value": 40
+  }
+]
+```
 
-### Making a Progressive Web App
+Gráfico Line:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+> GET https://private-afe609-testefront.apiary-mock.com/time-data
 
-### Advanced Configuration
+Response:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```json
+{
+  "today": [
+    {
+      "label": "12:00",
+      "value": 30
+    },
+    {
+      "label": "13:00",
+      "value": 24
+    },
+    {
+      "label": "14:00",
+      "value": 40
+    },
+    {
+      "label": "15:00",
+      "value": 57
+    },
+    {
+      "label": "16:00",
+      "value": 67
+    },
+    {
+      "label": "17:00",
+      "value": 12
+    },
+    {
+      "label": "18:00",
+      "value": 34
+    }
+  ],
+  "yesterday": [
+    {
+      "label": "12:00",
+      "value": 22
+    },
+    {
+      "label": "13:00",
+      "value": 45
+    },
+    {
+      "label": "14:00",
+      "value": 32
+    },
+    {
+      "label": "15:00",
+      "value": 67
+    },
+    {
+      "label": "16:00",
+      "value": 43
+    },
+    {
+      "label": "17:00",
+      "value": 23
+    },
+    {
+      "label": "18:00",
+      "value": 1
+    }
+  ]
+}
+```
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Submissão:
 
-### `npm run build` fails to minify
+Nos envie o repositorio do github, gitlab ou qualquer serviço de versionamento que tenha utilizado.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Qualquer dúvida entre em contato.
+
+! Boa sorte.
