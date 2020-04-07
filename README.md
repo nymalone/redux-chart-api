@@ -1,8 +1,5 @@
 
 
-### `npm start`
-
-
 <img src="https://semantix.com.br/wp-content/uploads/2019/12/Semantix-horizontal.png" alt="drawing" width="200"/>
 
 # Teste de Front-end Semantix
@@ -184,12 +181,3 @@ Response:
   ]
 }
 ```
-
-
-## Submissão:
-
-Nos envie o repositorio do github, gitlab ou qualquer serviço de versionamento que tenha utilizado.
-
-Qualquer dúvida entre em contato.
-
-! Boa sorte.
