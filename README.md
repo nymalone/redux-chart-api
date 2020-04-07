@@ -2,6 +2,9 @@
 
 <img src="https://semantix.com.br/wp-content/uploads/2019/12/Semantix-horizontal.png" alt="drawing" width="200"/>
 
+### [Veja o site](https://semantix-chart.netlify.com/) 
+
+
 # Teste de Front-end Semantix
 
 Este teste é apresentado aos candidatos as vagas de desenvolvimento Front-end para avaliar os quesitos técnicos.
