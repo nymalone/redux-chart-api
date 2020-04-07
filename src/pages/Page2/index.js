@@ -2,6 +2,18 @@ import React, { Component } from "react";
 
 import styled from "styled-components";
 
+import LineChart from '../../components/charts/LineChart'
+
+const Main = styled.div`
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  margin-left: 178px;
+  justify-content: space-evenly;
+  line-height: 25px;
+  padding-top: 167px;
+`;
+
 const Title = styled.p`
   color: #001B36;
   font-style: normal;
@@ -13,17 +25,19 @@ const Title = styled.p`
   margin-top: 50px;
 `;
 
-
-class Page1 extends Component {
+class Page2 extends Component {
   state = {};
 
   render() {
     return (
       <div>
        <Title>Page 2</Title>
+       <Main> 
+       <LineChart />
+       </Main>
       </div>
     );
   }
 }
 
-export default Page1;
+export default Page2;
