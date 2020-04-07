@@ -19,6 +19,12 @@ const Container = styled.div`
     rgba(90, 97, 105, 0.16), 0px 8px 8px 
     rgba(90, 97, 105, 0.06), 0px 3px 6px rgba(90, 97, 105, 0.12), 0px 1px 0px 
     rgba(90, 97, 105, 0.11);
+  
+  
+  @media screen and (max-width: 700px){
+    width: 300px;
+   margin-left: 24px;
+  margin-bottom: 30px;
   }
 `;
 

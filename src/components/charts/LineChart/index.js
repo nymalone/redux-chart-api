@@ -12,18 +12,26 @@ const Container = styled.div`
   height: 300px;
   padding: 2rem 2rem 5rem;
   border-radius: 5px;
-  border: 1px solid #D8DDE6;
+  border: 1px solid #d8dde6;
   background: rgba(255, 255, 255, 0.0001);
-  box-shadow:  0px 7px 60px 
-    rgba(90, 97, 105, 0.16), 0px 8px 8px 
-    rgba(90, 97, 105, 0.06), 0px 3px 6px rgba(90, 97, 105, 0.12), 0px 1px 0px 
-    rgba(90, 97, 105, 0.11);
+  box-shadow: 0px 7px 60px rgba(90, 97, 105, 0.16),
+    0px 8px 8px rgba(90, 97, 105, 0.06), 0px 3px 6px rgba(90, 97, 105, 0.12),
+    0px 1px 0px rgba(90, 97, 105, 0.11);
+
+  @media screen and (max-width: 700px) {
+    width: 300px;
+    margin-left: -155px;
   }
 `;
 
 const Chart = styled.div`
   position: relative;
   height: 100%;
+
+  @media screen and (max-width: 700px) {
+    width: 340px;
+    margin-left: -20px;
+  }
 `;
 
 const Title = styled.div`
@@ -77,12 +85,10 @@ export default class BarChart extends Component {
       }
     }
 
-    
-
     let dataLine = data;
     dataLine.labels = todayData.labels;
-    dataLine.datasets[0].data = todayData.values
-    dataLine.datasets[1].data = yesterdayData.values
+    dataLine.datasets[0].data = todayData.values;
+    dataLine.datasets[1].data = yesterdayData.values;
 
     return (
       <Container>

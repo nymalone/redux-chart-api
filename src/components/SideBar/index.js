@@ -15,6 +15,7 @@ const Sidebar = styled.div`
   position: fixed;
   height: 100%;
   overflow: auto;
+
   @media screen and (max-width: 700px) {
     width: 100%;
     height: auto;
@@ -29,10 +30,12 @@ const Title = styled.div`
   margin-top: 19px;
   line-height: 25px;
   display: block;
+
   @media screen and (max-width: 700px) {
     float: left;
-    margin-left: 20px
+    margin-left: 30px;
   }
+
   @media screen and (max-width: 400px) {
     text-align: center;
     float: none;
@@ -46,12 +49,14 @@ const Page1 = styled.div`
   font-size: 16px;
   line-height: 22px;
   display: block;
+
   @media screen and (max-width: 700px) {
     float: left;
     margin-right: 25px;
     margin-left: 25px;
   }
-    @media screen and (max-width: 400px) {
+
+  @media screen and (max-width: 400px) {
     text-align: center;
     float: none;
   }
@@ -64,10 +69,12 @@ const Page2 = styled.div`
   font-size: 16px;
   line-height: 22px;
   display: block;
+
   @media screen and (max-width: 700px) {
     float: left;
   }
-    @media screen and (max-width: 400px) {
+
+  @media screen and (max-width: 400px) {
     text-align: center;
     float: none;
   }
@@ -76,6 +83,7 @@ const Page2 = styled.div`
 const Img = styled.img`
   width: 35px;
   height: 35px;
+
   @media screen and (max-width: 700px) {
     float: left;
   }

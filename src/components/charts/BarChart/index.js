@@ -12,12 +12,16 @@ const Container = styled.div`
   height: 300px;
   padding: 2rem 2rem 5rem;
   border-radius: 5px;
-  border: 1px solid #D8DDE6;
+  border: 1px solid #d8dde6;
   background: rgba(255, 255, 255, 0.0001);
-  box-shadow:  0px 7px 60px 
-    rgba(90, 97, 105, 0.16), 0px 8px 8px 
-    rgba(90, 97, 105, 0.06), 0px 3px 6px rgba(90, 97, 105, 0.12), 0px 1px 0px 
-    rgba(90, 97, 105, 0.11);
+  box-shadow: 0px 7px 60px rgba(90, 97, 105, 0.16),
+    0px 8px 8px rgba(90, 97, 105, 0.06), 0px 3px 6px rgba(90, 97, 105, 0.12),
+    0px 1px 0px rgba(90, 97, 105, 0.11);
+
+  @media screen and (max-width: 700px) {
+    width: 300px;
+    margin-left: 24px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -51,14 +55,15 @@ export default class BarChart extends Component {
   };
 
   componentDidMount() {
-    this.getResult().catch((err) => console.error('Failed retrieving information', err));
+    this.getResult().catch((err) =>
+      console.error("Failed retrieving information", err)
+    );
   }
-
 
   render() {
     const { anualResult } = this.state;
     let dataResult = anualResult
-      .filter((item, idx) => idx < 6) 
+      .filter((item, idx) => idx < 6)
       .map((item) => item);
 
     let dataBars = data;
@@ -75,4 +80,3 @@ export default class BarChart extends Component {
     );
   }
 }
-

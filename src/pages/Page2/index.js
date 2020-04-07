@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import styled from "styled-components";
 
-import LineChart from '../../components/charts/LineChart'
+import LineChart from "../../components/charts/LineChart";
 
 const Main = styled.div`
   font-size: 18px;
@@ -15,14 +15,19 @@ const Main = styled.div`
 `;
 
 const Title = styled.p`
-  color: #001B36;
+  color: #001b36;
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
   line-height: 65px;
   position: absolute;
-  margin-left: 178px;
+  margin-left: 170px;
   margin-top: 50px;
+
+  @media screen and (max-width: 700px) {
+    margin-left: 135px;
+    font-size: 40px;
+  }
 `;
 
 class Page2 extends Component {
@@ -31,10 +36,10 @@ class Page2 extends Component {
   render() {
     return (
       <div>
-       <Title>Page 2</Title>
-       <Main> 
-       <LineChart />
-       </Main>
+        <Title>Page 2</Title>
+        <Main>
+          <LineChart />
+        </Main>
       </div>
     );
   }
