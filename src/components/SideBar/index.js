@@ -89,6 +89,10 @@ const Img = styled.img`
   }
 `;
 
+const StyledLink = styled(NavLink)`
+  text-decoration: none;
+`
+
 class Navigation extends Component {
   state = {};
 
@@ -98,19 +102,19 @@ class Navigation extends Component {
         <Sidebar>
           <Title> Semantix </Title>
 
-          <NavLink to="/">
+          <StyledLink to="/">
             <Page1>
               <Img src={Icon1} alt="circular icon" />
               <p>Page 1</p>
             </Page1>
-          </NavLink>
+          </StyledLink>
 
-          <NavLink to="page2">
+          <StyledLink to="page2">
             <Page2>
               <Img src={Icon2} alt="circular icon" />
               <p>Page 2</p>
             </Page2>
-          </NavLink>
+          </StyledLink>
         </Sidebar>
       </>
     );
